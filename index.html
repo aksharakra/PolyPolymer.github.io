@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Polymer</title>
+        <title>Rental</title>
         <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-        <link rel="import" href="bower_components/paper-card/paper-card.html">
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="import" href="elements.html">
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
     </head>
-    <body>
-
-
-    <div class="row">
-        <div class="col-sm-4 col-lg-4 col-md-4">
-        <paper-card heading="Card Title">
-        <div class="card-content">Some content</div>
-        <div class="card-actions">
-            <paper-button>Some action</paper-button>
+    <body fullblead layout vertical fit>
+        <paper-header-panel flex mode="waterfall-tall">
+	        <paper-toolbar>
+	        <!-- <paper-icon-button icon="menu"></paper-icon-button> -->
+		        <div flex class="indent title">Rental</div>
+		        <ul class="bottom row fit bottom">
+		            <paper-button >SELL</paper-button>
+		            <paper-button >BUY</paper-button>
+		            <paper-button >SignIn/Register</paper-button>
+		        </ul>
+	        </paper-toolbar>
+        </paper-header-panel>
+        <div>	
+	        <paper-card heading="Item 1" style="width:400px;">
+		        <div class="card-content" style="height:100px">Description of content 1</div>
+		        <div class="card-actions">
+		            <paper-button>RentIt</paper-button>
+		        </div>
+	        </paper-card>
         </div>
-        </paper-card>
-        </div>
-        <div class="col-sm-4 col-lg-4 col-md-4">
-        <paper-card heading="Card Title">
-        <div class="card-content">Some content</div>
-        <div class="card-actions">
-            <paper-button>Some action</paper-button>
-        </div>
-        </paper-card>
-        </div>        
-        <div class="col-sm-4 col-lg-4 col-md-4">
-        <paper-card heading="Card Title">
-        <div class="card-content">Some content</div>
-        <div class="card-actions">
-            <paper-button>Some action</paper-button>
-        </div>
-        </paper-card>
-        </div>
-        </div>
-
     </body>
 </html>
