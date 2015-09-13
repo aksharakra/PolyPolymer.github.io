@@ -34,3 +34,7 @@ body{
 paper-card{
   height: 300px;
 }
+.drawer-button{
+  width: 200px;
+  text-align: left;
+}

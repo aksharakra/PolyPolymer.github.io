@@ -7,24 +7,41 @@
         <link rel="stylesheet" type="text/css" href="css/custom.css">
     </head>
     <body fullblead layout vertical fit>
-        <paper-header-panel flex mode="waterfall-tall">
-	        <paper-toolbar>
-	        <!-- <paper-icon-button icon="menu"></paper-icon-button> -->
-		        <div flex class="indent title">PolyPolymer</div>
-		        <ul class="bottom row fit bottom">
-		            <paper-button ></paper-button>
-		            <paper-button ></paper-button>
-		            <paper-button ></paper-button>
+        <paper-drawer-panel>
+	        <paper-header-panel flex drawer mode="waterfall-tall">
+		        <paper-toolbar>
+		        <div>PolyPolymer</div>
+		        </paper-toolbar>
+	        <div>			        
+	        	<ul class="bottom row fit bottom">
+		            <paper-button class="drawer-button" >Option 1</paper-button>
+		            <paper-button class="drawer-button" >Option 2</paper-button>
+		            <paper-button class="drawer-button" >Option 3</paper-button>
 		        </ul>
-	        </paper-toolbar>
-        </paper-header-panel>
-        <div>	
-	        <paper-card heading="Item 1" style="width:400px;">
-		        <div class="card-content" style="height:100px">Description of content 1</div>
-		        <div class="card-actions">
-		            <paper-button>PolyIt</paper-button>
+	        </div>
+	        </paper-header-panel>
+	        <paper-header-panel flex main mode="waterfall-tall">
+		        <paper-toolbar>
+			        <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+			        <div flex class="indent title">PolyPolymer</div>
+		        </paper-toolbar>
+		        <div>
+		            <paper-card heading="Item 1" style="width:400px;">
+		            <div class="card-content" style="height:100px">Description of content 1</div>
+		            <div class="card-actions">
+		                <paper-button>PolyIt</paper-button>
+		            </div>
+		            </paper-card>
+		        </div>		        
+		        <div>
+		            <paper-card heading="Item 1" style="width:400px;">
+		            <div class="card-content" style="height:100px">Description of content 2</div>
+		            <div class="card-actions">
+		                <paper-button>PolyIt</paper-button>
+		            </div>
+		            </paper-card>
 		        </div>
-	        </paper-card>
-        </div>
+	        </paper-header-panel>
+        </paper-drawer-panel>
     </body>
 </html>
