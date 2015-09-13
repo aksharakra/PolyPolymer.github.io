@@ -1,0 +1,21 @@
+{
+  "name": "11",
+  "version": "0.0.0",
+  "authors": [
+    "chawlaaditya8 <chawlaaditya8@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "iron-elements": "PolymerElements/iron-elements#~1.0.3",
+    "paper-card": "PolymerElements/paper-card#~1.0.4",
+    "polymer": "Polymer/polymer#1.0.0"
+  }
+}
