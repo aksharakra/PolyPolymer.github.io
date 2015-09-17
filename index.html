@@ -8,9 +8,9 @@
     </head>
     <body fullblead layout vertical fit>
         <paper-drawer-panel>
-	        <paper-header-panel flex drawer mode="waterfall-tall">
+	        <paper-header-panel flex drawer>
 		        <paper-toolbar>
-		        <div>PolyPolymer</div>
+		        <div class="title middle">PolyPolymer</div>
 		        </paper-toolbar>
 	        <div>			        
 	        	<ul class="bottom row fit bottom">
@@ -20,13 +20,13 @@
 		        </ul>
 	        </div>
 	        </paper-header-panel>
-	        <paper-header-panel flex main mode="waterfall-tall">
+	        <paper-header-panel flex main>
 		        <paper-toolbar>
 			        <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
 			        <div flex class="indent title">PolyPolymer</div>
 		        </paper-toolbar>
 		        <div>
-		            <paper-card heading="Item 1" style="width:400px;">
+		            <paper-card flex heading="Item 1" style="width:400px;">
 		            <div class="card-content" style="height:100px">Description of content 1</div>
 		            <div class="card-actions">
 		                <paper-button>PolyIt</paper-button>
@@ -34,8 +34,16 @@
 		            </paper-card>
 		        </div>		        
 		        <div>
-		            <paper-card heading="Item 1" style="width:400px;">
+		            <paper-card heading="Item 2" style="width:400px;">
 		            <div class="card-content" style="height:100px">Description of content 2</div>
+		            <div class="card-actions">
+		                <paper-button>PolyIt</paper-button>
+		            </div>
+		            </paper-card>
+		        </div>
+		        <div>
+		            <paper-card heading="Item 3" style="width:400px;">
+		            <div class="card-content" style="height:100px">Description of content 3</div>
 		            <div class="card-actions">
 		                <paper-button>PolyIt</paper-button>
 		            </div>
