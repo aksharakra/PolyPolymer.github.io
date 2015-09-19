@@ -9,7 +9,7 @@
     <body fullblead layout vertical fit>
         <paper-drawer-panel>
 	        <paper-header-panel flex drawer>
-		        <paper-toolbar  class="abc">
+		        <paper-toolbar  class="abc box">
 		        <div class="title middle">PolyPolymer</div>
 		        </paper-toolbar>
 	        <div>			        
@@ -21,10 +21,10 @@
 	        </div>
 	        </paper-header-panel>
 	        <paper-header-panel flex main>
-		        <paper-toolbar class="abc">
-			        <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+            <paper-toolbar class="abc box">
+              <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
 			        <div flex class="indent title">PolyPolymer</div>
-		        </paper-toolbar>
+		        </paper-toolbar>		        
 		        <div>
 		            <paper-card flex heading="Paper buttons">
 		            <div class="card-content poly-button">		              
@@ -37,29 +37,30 @@
 		            </div>
 		            </paper-card>
 		            <paper-card flex heading="Poly It">
-		            <div class="card-content poly-button">		              
-		              <paper-button class="def background-blue"></paper-button>
-                  <paper-button class="def background-red"></paper-button>
-                  <paper-button class="def background-green"></paper-button>
-                  <paper-button class="def background-pink"></paper-button><br />
-                  
-                  <paper-button raised class="def background-blue"></paper-button>
-                  <paper-button raised class="def background-red"></paper-button>
-                  <paper-button raised class="def background-green"></paper-button>
-                  <paper-button raised class="def background-pink"></paper-button><br />
-                  
-                  <paper-button noink class="def background-blue"></paper-button>
-                  <paper-button noink class="def background-red"></paper-button>
-                  <paper-button noink class="def background-green"></paper-button>
-                  <paper-button noink class="def background-pink"></paper-button><br />
-                  
-                  <paper-button toggles class="def background-blue"></paper-button>
-                  <paper-button toggles class="def background-red"></paper-button>
-                  <paper-button toggles class="def background-green"></paper-button>
-                  <paper-button toggles class="def background-pink"></paper-button>
-                </div>  
+  		            <div class="card-content poly-button">		              
+  		              <paper-button class="def background-default">Default</paper-button><br />
+  		              <paper-button class="def background-blue ripple"></paper-button>
+                    <paper-button class="def background-red ripple"></paper-button>
+                    <paper-button class="def background-green"></paper-button>
+                    <paper-button class="def background-pink"></paper-button><br />
+                    
+                    <paper-button raised class="def background-blue"></paper-button>
+                    <paper-button raised class="def background-red"></paper-button>
+                    <paper-button raised class="def background-green"></paper-button>
+                    <paper-button raised class="def background-pink"></paper-button><br />
+                    
+                    <paper-button noink class="def background-blue"></paper-button>
+                    <paper-button noink class="def background-red"></paper-button>
+                    <paper-button noink class="def background-green"></paper-button>
+                    <paper-button noink class="def background-pink"></paper-button><br />
+                    
+                    <paper-button toggles class="def background-blue"></paper-button>
+                    <paper-button toggles class="def background-red"></paper-button>
+                    <paper-button toggles class="def background-green"></paper-button>
+                    <paper-button toggles class="def background-pink"></paper-button>
+                  </div>  
 			          </paper-card>
-		        </div>		        
+		        </div>		        <br /><br />
 		        <div>
 		            <paper-card heading="Item 2">
 		            <div class="card-content">
@@ -87,3 +88,11 @@
         <script src="js/palette.js"></script>
     </body>
 </html>
+
+
+<button class="ripple">Login</button>
+
+
+<div class="box ripple" data-ripple-color="red">
+  
+</div>
