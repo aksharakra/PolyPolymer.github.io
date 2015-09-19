@@ -42,3 +42,15 @@ paper-card{
   padding 10px;
   margin: 10px;
 }
+.background-red{
+  background: red;
+}
+.background-green{
+  background: green;
+}
+.background-blue{
+  background: blue;
+}
+.background-pink{
+  background: pink;
+}
