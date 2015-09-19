@@ -9,7 +9,7 @@
     <body fullblead layout vertical fit>
         <paper-drawer-panel>
 	        <paper-header-panel flex drawer>
-		        <paper-toolbar>
+		        <paper-toolbar  class="abc">
 		        <div class="title middle">PolyPolymer</div>
 		        </paper-toolbar>
 	        <div>			        
@@ -21,7 +21,7 @@
 	        </div>
 	        </paper-header-panel>
 	        <paper-header-panel flex main>
-		        <paper-toolbar>
+		        <paper-toolbar class="abc">
 			        <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
 			        <div flex class="indent title">PolyPolymer</div>
 		        </paper-toolbar>
@@ -38,10 +38,10 @@
 		            </paper-card>
 		            <paper-card flex heading="Poly It">
 		            <div class="card-content poly-button">		              
-		              <paper-button style="background:blue"></paper-button>
-                  <paper-button style="background:red"></paper-button>
-                  <paper-button style="background:green"></paper-button>
-                  <paper-button style="background:pink"></paper-button><br />
+		              <paper-button style="background:red" class="red"></paper-button>
+                  <paper-button style="background:blue" class="blue"></paper-button>
+                  <paper-button style="background:green" class="def"></paper-button>
+                  <paper-button style="background:pink" class="def"></paper-button><br />
                   
                     <paper-button style="background:blue" raised></paper-button>
                   <paper-button style="background:red" raised></paper-button>
@@ -83,5 +83,13 @@
 		        </div>
 	        </paper-header-panel>
         </paper-drawer-panel>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $(".blue, .red").click(function(){
+                $(".abc").css("background-color", $(".blue, .red").css("background-color"));
+            });
+        });
+        </script>
     </body>
 </html>
