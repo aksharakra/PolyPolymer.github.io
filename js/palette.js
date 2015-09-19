@@ -1,5 +1,3 @@
-$(document).ready(function(){
-    $(".blue, .red").click(function(){
-        $(".abc").css("background-color", $(".blue, .red").css("background-color"));
-    });
-});
+ $(".def").click(function(){
+       $(".abc").css("background-color", $(this).css("background-color"));
+   });
