@@ -1,33 +1,33 @@
 $(".def").click(function(){
   $(".abc").css("background-color", $(this).css("background-color"));
 });
-(function (window, $) {
+// (function (window, $) {
   
-  $(function() {
+//   $(function() {
     
     
-    $('.def').on('click', function (event) {
-      event.preventDefault();
+//     $('.def').on('click', function (event) {
+//       event.preventDefault();
       
-      var rippleObj = $(".box");
-      var $div = $('<div/>');
+//       var rippleObj = $(".box");
+//       var $div = $('<div/>');
       
-      $div.addClass('ripple-effect');
-      var $ripple = $(".ripple-effect");
+//       $div.addClass('ripple-effect');
+//       var $ripple = $(".ripple-effect");
       
-      $ripple.css("height", rippleObj.height());
-      $ripple.css("width", rippleObj.width());
-      $div
-        .css({
-          background: rippleObj.data("ripple-color")
-        }) 
-        .appendTo(rippleObj);
+//       $ripple.css("height", rippleObj.height());
+//       $ripple.css("width", rippleObj.width());
+//       $div
+//         .css({
+//           background: rippleObj.data("ripple-color")
+//         }) 
+//         .appendTo(rippleObj);
 
-      window.setTimeout(function(){
-        $div.remove();
-      }, 20);
-    });
+//       window.setTimeout(function(){
+//         $div.remove();
+//       }, 20);
+//     });
     
-  });
+//   });
   
-})(window, jQuery);
+// })(window, jQuery);

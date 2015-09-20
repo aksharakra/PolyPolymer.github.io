@@ -7,10 +7,16 @@
         <link rel="stylesheet" type="text/css" href="css/custom.css">
     </head>
     <body fullblead layout vertical fit>
+    <my-element></my-element>
+    <dom-module id="my-element">
+        <template>
+
         <paper-drawer-panel>
 	        <paper-header-panel flex drawer>
 		        <paper-toolbar  class="abc box">
 		        <div class="title middle">PolyPolymer</div>
+                    <paper-ripple id="ripple" center></paper-ripple>
+
 		        </paper-toolbar>
 	        <div>			        
 	        	<ul class="bottom row fit bottom">
@@ -24,6 +30,8 @@
             <paper-toolbar class="abc box">
               <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
 			        <div flex class="indent title">PolyPolymer</div>
+                    <paper-ripple id="ripple" center></paper-ripple>
+
 		        </paper-toolbar>		        
 		        <div>
 		            <paper-card flex heading="Paper buttons">
@@ -38,26 +46,26 @@
 		            </paper-card>
 		            <paper-card flex heading="Poly It">
   		            <div class="card-content poly-button">		              
-  		              <paper-button class="def background-default">Default</paper-button><br />
-  		              <paper-button class="def background-blue ripple"></paper-button>
-                    <paper-button class="def background-red ripple"></paper-button>
-                    <paper-button class="def background-green"></paper-button>
-                    <paper-button class="def background-pink"></paper-button><br />
+  		              <paper-button class="def background-default" on-mousedown="_onMousedown" on-mouseup="_onMouseup">Default</paper-button><br />
+                    <paper-button class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button class="def background-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button class="def background-pink" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
                     
-                    <paper-button raised class="def background-blue"></paper-button>
-                    <paper-button raised class="def background-red"></paper-button>
-                    <paper-button raised class="def background-green"></paper-button>
-                    <paper-button raised class="def background-pink"></paper-button><br />
+                    <paper-button raised class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-pink" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
                     
-                    <paper-button noink class="def background-blue"></paper-button>
-                    <paper-button noink class="def background-red"></paper-button>
-                    <paper-button noink class="def background-green"></paper-button>
-                    <paper-button noink class="def background-pink"></paper-button><br />
+                    <paper-button noink class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button noink class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button noink class="def background-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button noink class="def background-pink" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
                     
-                    <paper-button toggles class="def background-blue"></paper-button>
-                    <paper-button toggles class="def background-red"></paper-button>
-                    <paper-button toggles class="def background-green"></paper-button>
-                    <paper-button toggles class="def background-pink"></paper-button>
+                    <paper-button toggles class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button toggles class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button toggles class="def background-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button toggles class="def background-pink" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
                   </div>  
 			          </paper-card>
 		        </div>		        <br /><br />
@@ -84,15 +92,39 @@
 		        </div>
 	        </paper-header-panel>
         </paper-drawer-panel>
+        </template>
+
         <script src="js/jquery.min.js"></script>
+        
+        <script>
+            Polymer({
+                is: 'my-element',
+                
+                    _assignColor: function(e) {
+                         var button = Polymer.dom(e).localTarget;
+                         var ripple = this.$.ripple;
+                         
+                         $(ripple).css("color", $(button).css("background-color"));   
+                         
+                         // or without jQuery
+                         //var buttonStyle = getComputedStyle(button, null);
+                         //ripple.style.color = buttonStyle.backgroundColor; 
+                    },
+                     
+                     _onMousedown: function (e) {
+                        this._assignColor(e);
+                         
+                         this.$.ripple.downAction({x: e.x, y: e.y});
+                     },
+                     
+                     _onMouseup: function (e) {
+                         this._assignColor(e);
+                       
+                         this.$.ripple.upAction();
+                     }             
+            });
+        </script>
         <script src="js/palette.js"></script>
-    </body>
-</html>
-
-
-<button class="ripple">Login</button>
-
-
-<div class="box ripple" data-ripple-color="red">
-  
-</div>
+    </dom-module>
+</body>
+</html>s
