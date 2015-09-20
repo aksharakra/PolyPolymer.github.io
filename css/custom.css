@@ -48,49 +48,54 @@ paper-card{
 .background-green{
   background: green;
 }
+.background-android-green{
+  background: #a4c639;
+}
+.background-auburn{
+  background:#a52a2a;
+}
+.background-azure{
+  background: #007fff;
+}
+.background-black{
+  background: #000000;
+}
+.background-boston-university-red{
+  background: #cc0000;
+}
+.background-brass{
+  background: #b5a642;
+}
+.background-burnt-orange{
+  background: #cc5500;
+}
+.background-cafe-au-lait{
+  background: #a67b5b;
+}
+.background-citrine{
+  background: #e4d00a;
+}
+.background-coquelicot{
+  background: #ff3800;
+}
 .background-blue{
   background: blue;
 }
 .background-pink{
   background: pink;
 }
+.background-raspberry{
+  background: #e30b5d;
+}
+.background-amber{
+  background: #ffbf00;
+}
 .background-default{
   background: #3F51B5;
   color: white;
 }
 
-.fab{
-  border-radius: 50%;
-  margin:0;
-  padding: 20px;
-}
-
-.material{
-  position:relative;
-  color:white;
-  margin: 20px auto;
-  height:400px;
-  width:500px;
-  background:#f45673;
-  
-}
-
 .ripple{
-  overflow:hidden;
-}
-
-.ripple-effect{
-  position: absolute;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  background: white;
-  left: 100px;
-  top: 100px;
-  margin-left: -25px;
-  margin-top: -25px;
-
-    
   animation: ripple-animation 2s;
 }
 

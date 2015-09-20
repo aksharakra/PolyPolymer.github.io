@@ -46,26 +46,26 @@
 		            </paper-card>
 		            <paper-card flex heading="Poly It">
   		            <div class="card-content poly-button">		              
-  		              <paper-button class="def background-default" on-mousedown="_onMousedown" on-mouseup="_onMouseup">Default</paper-button><br />
-                    <paper-button class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button class="def background-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button class="def background-pink" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
-                    
+  		              <paper-button raised class="def background-default" on-mousedown="_onMousedown" on-mouseup="_onMouseup">Default</paper-button><br />
                     <paper-button raised class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
                     <paper-button raised class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
                     <paper-button raised class="def background-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
                     <paper-button raised class="def background-pink" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
                     
-                    <paper-button noink class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button noink class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button noink class="def background-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button noink class="def background-pink" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
+                    <paper-button raised class="def background-raspberry" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-amber" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-android-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-auburn" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
                     
-                    <paper-button toggles class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button toggles class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button toggles class="def background-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button toggles class="def background-pink" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-azure" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-black" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-boston-university-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-brass" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
+                    
+                    <paper-button raised class="def background-burnt-orange" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-cafe-au-lait" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-citrine" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                    <paper-button raised class="def background-coquelicot" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
                   </div>  
 			          </paper-card>
 		        </div>		        <br /><br />
@@ -105,7 +105,6 @@
                          var ripple = this.$.ripple;
                          
                          $(ripple).css("color", $(button).css("background-color"));   
-                         
                          // or without jQuery
                          //var buttonStyle = getComputedStyle(button, null);
                          //ripple.style.color = buttonStyle.backgroundColor; 
@@ -121,10 +120,11 @@
                          this._assignColor(e);
                        
                          this.$.ripple.upAction();
-                     }             
+                     }   
+                         
             });
         </script>
         <script src="js/palette.js"></script>
     </dom-module>
 </body>
-</html>s
+</html>
