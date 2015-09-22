@@ -28,9 +28,10 @@
 	        </paper-header-panel>
 	        <paper-header-panel flex main>
             <paper-toolbar class="abc box">
+              <paper-ripple id="ripple" center></paper-ripple>
               <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
 			        <div flex class="indent title">PolyPolymer</div>
-                    <paper-ripple id="ripple" center></paper-ripple>
+                    
 
 		        </paper-toolbar>		        
 		        <div>
@@ -44,43 +45,34 @@
 		                <paper-button>PolyIt</paper-button>
 		            </div>
 		            </paper-card>
-		            <paper-card flex heading="Poly It">
-  		            <div class="card-content poly-button">		              
-  		              <paper-button raised class="def background-default" on-mousedown="_onMousedown" on-mouseup="_onMouseup">Default</paper-button><br />
-                    <paper-button raised class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-pink" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
-                    
-                    <paper-button raised class="def background-raspberry" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-amber" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-android-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-auburn" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
-                    
-                    <paper-button raised class="def background-azure" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-black" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-boston-university-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-brass" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
-                    
-                    <paper-button raised class="def background-burnt-orange" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-cafe-au-lait" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-citrine" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                    <paper-button raised class="def background-coquelicot" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
-                  </div>  
-			          </paper-card>
-		        </div>		        <br /><br />
-		        <div>
-		            <paper-card heading="Item 2">
-		            <div class="card-content">
-                  <paper-button>
-                    <iron-icon icon="favorite"></iron-icon>
-                    custom button content
-                  </paper-button>
-		            </div>
-		            <div class="card-actions">
-		                <paper-button>PolyIt</paper-button>
-		            </div>
-		            </paper-card>
+                <div>
+  		            <paper-card heading="CSS">
+                      Font Color <paper-toggle-button></paper-toggle-button><br />
+                      Background Color <paper-toggle-button></paper-toggle-button><br />
+                      Element Height <paper-icon-button icon="add"></paper-icon-button><paper-icon-button icon="remove"></paper-icon-button><br />
+                      Font Color <paper-toggle-button></paper-toggle-button><br />
+                      Font Color <paper-toggle-button></paper-toggle-button><br />
+  		            </paper-card>
+  		            <paper-card flex heading="Color palette" class="depth">
+    		              <paper-button raised class="def background-default" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
+                      <paper-button raised class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-pink" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
+                      <paper-button raised class="def background-raspberry" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-amber" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-android-green" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-auburn" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
+                      <paper-button raised class="def background-azure" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-black" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-boston-university-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-brass" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
+                      <paper-button raised class="def background-burnt-orange" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-cafe-au-lait" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-citrine" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+                      <paper-button raised class="def background-coquelicot" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
+  			          </paper-card>
+			          </div>
 		        </div>
 		        <div>
 		            <paper-card heading="Item 3">
