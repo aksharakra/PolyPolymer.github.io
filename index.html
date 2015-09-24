@@ -43,13 +43,15 @@
 		            </paper-card>
                   <div>
   		            <paper-card heading="CSS">
-                      Font Color <paper-toggle-button></paper-toggle-button><br />
-                      Background Color <paper-toggle-button></paper-toggle-button><br />
-                      Element Shadow <paper-icon-button icon="remove"></paper-icon-button><paper-icon-button icon="add"></paper-icon-button><br />
-                      Font Color <paper-toggle-button></paper-toggle-button><br />
-                      Font Color <paper-toggle-button></paper-toggle-button><br />
+                    Element Shadow<br />
+                    <paper-radio-button class="one">1</paper-radio-button>
+                    <paper-radio-button class="two">2</paper-radio-button>
+                    <paper-radio-button class="three">3</paper-radio-button>
+                    <paper-radio-button class="four">4</paper-radio-button>
+                    <paper-radio-button class="five">5</paper-radio-button>
+
   		            </paper-card>
-  		            <paper-card flex heading="Color palette" class="depth">
+  		            <paper-card flex heading="Color palette" class="paper-card">
     		              <paper-button raised class="def background-default" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
                       <paper-button raised class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
                       <paper-button raised class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
@@ -113,6 +115,7 @@
             });
         </script>
         <script src="js/palette.js"></script>
+        <script src="js/papershadow.js"></script>
     </dom-module>
 </body>
 </html>

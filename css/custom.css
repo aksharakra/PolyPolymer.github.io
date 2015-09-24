@@ -98,6 +98,10 @@ paper-card{
 .ripple{
   animation: ripple-animation 2s;
 }
+.depth{
+  elevation: 4dp;
+  
+}
 
 @keyframes ripple-animation {
     from {
