@@ -30,7 +30,7 @@
               <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
 			        <div flex class="indent title">PolyPolymer</div>
 		        </paper-toolbar>		        
-
+            <div>
 		            <paper-card flex heading="Paper buttons">
 		            <div class="card-content poly-button">		              
 		              <paper-button>flat button</paper-button>
@@ -67,14 +67,24 @@
                       <paper-button raised class="def background-coquelicot" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
   			          </paper-card>
               </div>
-		        </div>
+		        <marked-element markdown="`Markdown` is _awesome_!">
+  <div class="markdown-html"></div>
+</marked-element>
+		        <marked-element>
+  <div class="markdown-html"></div>
+  <script type="text/markdown">
+    Check out my markdown!
 
-		            <paper-card heading="Item 3">
-		            <div class="card-content">Description of content 3</div>
-		            <div class="card-actions">
-		                <paper-button>PolyIt</paper-button>
+    We can even embed elements without fear of the HTML parser mucking up their
+    textual representation:
 
-		            </paper-card>
+    ```html
+    <awesome-sauce>
+      <div>Oops, I'm about to forget to close this div.
+    </awesome-sauce>
+    ```
+  </script>
+</marked-element>
 		        </div>
 	        </paper-header-panel>
         </paper-drawer-panel>
