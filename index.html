@@ -4,69 +4,26 @@
         <title>PolyPolymer</title>
         <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
         <link rel="import" href="elements.html">
-        <link rel="stylesheet" type="text/css" href="css/custom.css">
     </head>
     <body fullblead layout vertical fit>
-    <my-element></my-element>
-    <dom-module id="my-element">
-        <template>
-        <paper-drawer-panel>
+        <paper-drawer-panel responsive-width="800px">
 	        <paper-header-panel flex drawer>
 		        <paper-toolbar  class="">
 		        <div class="title middle">PolyPolymer</div>
-                    <paper-ripple id="ripple" center></paper-ripple>
 		        </paper-toolbar>
-
 	        	<div class="bottom row fit bottom">
 		        </div>
-
 	        </paper-header-panel>
 	        <paper-header-panel flex main>
             <paper-toolbar class="">
-              <paper-ripple id="ripple" center></paper-ripple>
+              <paper-ripple center></paper-ripple>
               <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
 			        <div flex class="indent title">PolyPolymer</div>
 		        </paper-toolbar>		        
             <div>
               dvsd
               </div>
-	
 	        </paper-header-panel>
         </paper-drawer-panel>
-        </template>
-
-        <script src="js/jquery.min.js"></script>
-        
-        <script>
-            Polymer({
-                is: 'my-element',
-                
-                    _assignColor: function(e) {
-                         var button = Polymer.dom(e).localTarget;
-                         var ripple = this.$.ripple;
-                         
-                         $(ripple).css("color", $(button).css("background-color"));   
-                         // or without jQuery
-                         //var buttonStyle = getComputedStyle(button, null);
-                         //ripple.style.color = buttonStyle.backgroundColor; 
-                    },
-                     
-                     _onMousedown: function (e) {
-                        this._assignColor(e);
-                         
-                         this.$.ripple.downAction({x: e.x, y: e.y});
-                     },
-                     
-                     _onMouseup: function (e) {
-                         this._assignColor(e);
-                       
-                         this.$.ripple.upAction();
-                     }   
-                         
-            });
-        </script>
-        <script src="js/palette.js"></script>
-        <script src="js/papershadow.js"></script>
-    </dom-module>
 </body>
 </html>
