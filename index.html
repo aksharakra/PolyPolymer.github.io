@@ -7,14 +7,14 @@
     <link rel="import" href="elements.html">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
   </head>
-  <body fullblead layout vertical fit>
+  <body class="fullblead layout vertical fit">
     <my-element></my-element>
     <dom-module id="my-element">
       <template>
         <paper-drawer-panel>
-          <paper-header-panel flex drawer>
-            <paper-toolbar  class="abc box">
-              <div class="title middle">PolyPolymer</div>
+          <paper-header-panel class="flex" drawer>
+            <paper-toolbar  class="abc box tall">
+              <div class="title middle">Logo</div>
               <paper-ripple id="ripple" center></paper-ripple>
             </paper-toolbar>
             <div class="bottom row fit bottom">
@@ -27,21 +27,23 @@
             <paper-toolbar class="abc box">
               <paper-ripple id="ripple" center></paper-ripple>
               <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
-                <div flex class="indent title">PolyPolymer</div>
-              </paper-toolbar>                
+              <div flex class="indent title">PolyPolymer</div>
+              <span class="flex"></span>
+              <paper-icon-button icon="search"></paper-icon-button>
+            </paper-toolbar>                
             <div main>
               <paper-card flex heading="Paper buttons">
-                <div class="card-content poly-button">                    
+                <div class="card-content paper-button-card">                    
                   <paper-button>flat button</paper-button>
                   <paper-button raised>raised button</paper-button>
                   <paper-button noink>No ripple effect</paper-button>
                   <paper-button toggles>toggle-able button</paper-button>
                 </div>
                 <div class="card-actions">
-                <paper-button>PolyIt</paper-button>
+                <paper-button class="poly-paper-button">PolyIt</paper-button>
               </div>
               </paper-card>
-              <paper-card flex heading="HTML">
+              <paper-card flex heading="HTML" class="paper-button-poly">
                 <div class="card-content poly-button">                      
                   <marked-element>
                     <div class="markdown-html"></div>
@@ -56,12 +58,12 @@
                   </marked-element>
                 </div>
               </paper-card>
-              <paper-card heading="CSS">
+              <paper-card heading="CSS" class="paper-button-poly">
                 Element Shadow
                 <paper-icon-button class="addElevation" icon="add"></paper-icon-button>
                 <paper-icon-button class="removeElevation" icon="remove"></paper-icon-button>
               </paper-card>
-              <paper-card flex heading="Color palette" class="paper-card">
+              <paper-card flex heading="Color palette" class="paper-card paper-button-poly">
                 <paper-button raised class="def background-default" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button><br />
                 <paper-button raised class="def background-blue" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
                 <paper-button raised class="def background-red" on-mousedown="_onMousedown" on-mouseup="_onMouseup"></paper-button>
@@ -83,27 +85,28 @@
       <script src="js/jquery.min.js"></script>
       <script>
           Polymer({
-              is: 'my-element',
-                  _assignColor: function(e) {
-                       var button = Polymer.dom(e).localTarget;
-                       var ripple = this.$.ripple;
-                       $(ripple).css("color", $(button).css("background-color"));   
-                       // or without jQuery
-                       //var buttonStyle = getComputedStyle(button, null);
-                       //ripple.style.color = buttonStyle.backgroundColor; 
-                  },
-                   _onMousedown: function (e) {
-                      this._assignColor(e);
-                       this.$.ripple.downAction({x: e.x, y: e.y});
-                   },
-                   _onMouseup: function (e) {
-                       this._assignColor(e);
-                       this.$.ripple.upAction();
-                   }   
-            });
+            is: 'my-element',
+              _assignColor: function(e) {
+                 var button = Polymer.dom(e).localTarget;
+                 var ripple = this.$.ripple;
+                 $(ripple).css("color", $(button).css("background-color"));   
+                 // or without jQuery
+                 //var buttonStyle = getComputedStyle(button, null);
+                 //ripple.style.color = buttonStyle.backgroundColor; 
+              },
+              _onMousedown: function (e) {
+                this._assignColor(e);
+                 this.$.ripple.downAction({x: e.x, y: e.y});
+              },
+              _onMouseup: function (e) {
+                this._assignColor(e);
+                this.$.ripple.upAction();
+              }   
+          });
       </script>
       <script src="js/palette.js"></script>
       <script src="js/papershadow.js"></script>
+      <script src="js/polypaperbutton.js"></script>
     </dom-module>
   </body>
 </html>

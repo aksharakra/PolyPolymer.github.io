@@ -1,13 +1,14 @@
-counter=0;
-$(".addElevation").click(function(){
-  if(counter<5){
-  counter++;
+$(".removeElevation").click(function(){
+  counter=$('.paper-card').attr('elevation');
+  if(counter>0){
+  counter--;
   $('.paper-card').attr('elevation',counter);
   }
 });
-$(".removeElevation").click(function(){
-  if(counter>0){
-  counter--;
+$(".addElevation").click(function(){
+  counter=$('.paper-card').attr('elevation');
+  if(counter<5){
+  counter++;
   $('.paper-card').attr('elevation',counter);
   }
 });
